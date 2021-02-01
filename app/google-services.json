@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "659912597254",
+    "firebase_url": "https://avtorization-bf92b-default-rtdb.firebaseio.com",
+    "project_id": "avtorization-bf92b",
+    "storage_bucket": "avtorization-bf92b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:659912597254:android:861e4b67fc72b46da48887",
+        "android_client_info": {
+          "package_name": "com.example.avtorization"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "659912597254-kuplfvt9sjnbmpi9q7f5ga2d8sd1hhr3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG3jDVg4R6c9hRgi9G46nTRVEUVPmubrc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "659912597254-kuplfvt9sjnbmpi9q7f5ga2d8sd1hhr3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+
+    <item name="colorPrimary">#157A83</item>
+    <item name="colorPrimaryDark">#277E6C</item>
+    <item name="colorAccent">#FFBD6D2F</item>
+    </style>
+
+    <style name="RatingBar" parent="AppTheme">
+        <item name="colorControlActivated">#BD6D2F</item>
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+</resources>
