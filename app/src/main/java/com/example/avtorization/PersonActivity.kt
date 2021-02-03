@@ -12,13 +12,14 @@ import com.google.firebase.database.*
 
 class PersonActivity : AppCompatActivity(), UpdateAndDelete {
 
-    private lateinit var userInfoTextView: TextView
     private lateinit var logoutButton: Button
 
     lateinit var database:DatabaseReference
 
     var toDOList : MutableList<ToDoModel>? = null
+
     lateinit var adapter: ToDoAdapter
+    
     private var listViewItem : ListView?= null
 
     private lateinit var mAuth: FirebaseAuth
@@ -37,13 +38,13 @@ class PersonActivity : AppCompatActivity(), UpdateAndDelete {
 
         fab.setOnClickListener{ view ->
             val alertDialog = AlertDialog.Builder(this)
-            val textEdit = EditText(this)
+            val textEditText = EditText(this)
             alertDialog.setMessage("დაამატეთ ახალი ელემენტი")
             alertDialog.setTitle("შეიყვანეთ სიის ელემენტი")
-            alertDialog.setView(textEdit)
+            alertDialog.setView(textEditText)
             alertDialog.setPositiveButton("დამატება"){dialog, i ->
                 val todoItemData = ToDoModel.createList()
-                todoItemData.itemDataText = textEdit.text.toString()
+                todoItemData.itemDataText = textEditText.text.toString()
                 todoItemData.done = false
 
                 val newItemData = database.child("todo").push()
@@ -73,10 +74,7 @@ class PersonActivity : AppCompatActivity(), UpdateAndDelete {
         })
 
 
-        userInfoTextView = findViewById(R.id.userInfotextView)
         logoutButton = findViewById(R.id.logoutButton)
-
-        userInfoTextView.text = mAuth.currentUser?.email
 
 
         logoutButton.setOnClickListener {
@@ -121,6 +119,5 @@ class PersonActivity : AppCompatActivity(), UpdateAndDelete {
         itemReference.removeValue()
         adapter.notifyDataSetChanged()
     }
-
 
 }

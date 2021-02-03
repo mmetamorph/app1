@@ -4,10 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.CheckBox
-import android.widget.ImageButton
-import android.widget.TextView
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 
 class ToDoAdapter (context: Context, toDoList:MutableList<ToDoModel>) : BaseAdapter() {
@@ -17,10 +14,11 @@ class ToDoAdapter (context: Context, toDoList:MutableList<ToDoModel>) : BaseAdap
     private var updateAndDelete: UpdateAndDelete = context as UpdateAndDelete
 
 
-    override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
-        val UID: String = itemList.get(p0).UID as String
-        val itemTextData = itemList.get(p0).itemDataText as String
-        val done: Boolean = itemList.get(p0).done as Boolean
+    override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View? {
+
+        val UID: String = (itemList.get(p0).UID as String?)!!
+        val itemTextData = itemList.get(p0).itemDataText
+        val done: Boolean = itemList.get(p0).done as Boolean? == true
 
         val view: View
         val viewHolder: ListViewHolder
